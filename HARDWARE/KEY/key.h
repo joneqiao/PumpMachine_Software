@@ -14,6 +14,8 @@
 #define KEY_CHONGXI      HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_12)   //PC12->≥Âœ¥
 #define KEY_JIAOTA       HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_9)    //PB9->Ω≈Ã§
 
+extern u8 JiaoTaFlag;
+
 void KEY_Init(void);
 
 #endif

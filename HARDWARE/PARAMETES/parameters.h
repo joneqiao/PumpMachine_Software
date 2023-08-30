@@ -37,7 +37,7 @@ extern float chuli_current_val;
 extern u8 ChuliDispflag;
 extern float chulisensorvalue;
 extern u8 motogear;
-extern u16 presetnpressure;
+extern float presetnpressure;
 extern u16 flowsetvalue;
 extern u16 pressuresetvalue;
 extern u8 speedupflag;

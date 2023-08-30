@@ -15,7 +15,6 @@ extern u8 xiyinflag;
 extern u8 bujinflag;
 
 extern u8 xiyinonceflag;
-extern u16 presetnpressure;
 extern u16 URT_Preset[3];
 
 u16 runmode;
