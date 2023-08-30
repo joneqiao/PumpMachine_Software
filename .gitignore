@@ -1,0 +1,7 @@
+
+OBJ/stm32f1xx_it.o
+OBJ/stm32f1xx_hal_usart.o
+OBJ/stm32f1xx_hal_usart.o
+OBJ/buzzer.o
+*.o
+OBJ/adc.o
