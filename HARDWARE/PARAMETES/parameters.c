@@ -5,7 +5,7 @@ float chuli_current_val;
 u8 ChuliDispflag;
 u8 pidcalflag;
 u8 EnterFactorymode = 0;
-u16 presetnpressure = 400;           //negative pressure threshold value 
+float presetnpressure = 400;           //negative pressure threshold value 
 
 const float MXP2100offset       = 1000;          //µãÎ»Æ÷Öµ
 const float MXP2100sensitivity  = 0.4;           

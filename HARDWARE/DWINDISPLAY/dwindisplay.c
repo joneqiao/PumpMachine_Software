@@ -15,7 +15,6 @@ extern u8 xiyinflag;
 extern u8 bujinflag;
 
 extern u8 xiyinonceflag;
-extern u16 presetnpressure;
 extern u16 URT_Preset[3];
 
 u16 runmode;
@@ -25,8 +24,8 @@ u16 flowsetvalue;
 u8 xyiconstatue=0;  
 u8 bjiconstatue=0;
 u16 waterhight=0;
-                                //0     1       2      3      4     5     6       7      8      9      10     11     12     13     14     15    16      17    18     19      20     21     22CK    23CB     24NK     25NB
-vs16 para2flash[parameternum]={0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0050,0x0000,0x0000,0x0000,0x0001,0x0000,0x0001,0x0000,};//parameters need to save in flash
+                                //0     1       2      3      4     5     6       7      8      9      10     11     12     13     14     15    16      17    18     19      20     21     22CK    23CB     24NK     25NB  26attract pump setvalue
+vs16 para2flash[parameternum]={0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0050,0x0000,0x0000,0x0000,0x0001,0x0000,0x0001,0x0000,0x0190};//parameters need to save in flash
 u8 interfacediarray[] = {0x5a,0xa5,0x04,0x80,0x03,0x00,0x00};//0x04,0x80,0x03//5A A5 07 82 0084 5A01 0001
 u8 variatearray[]     = {0x5a,0xa5,0x05,0x82,0x00,0x00,0x00,0x00}; 
 u8 iconarray[]        = {0x5a,0xa5,0x05,0x82,0x00,0x00,0x00,0x00};
@@ -55,6 +54,9 @@ void DwinDisplayInit()                              //initial display
     chulib           =(float) para2flash[23]/100;
     negativepressureK=(float) para2flash[24]/100;
     negativepressureB=(float) para2flash[25]/100;
+
+	presetnpressure  =(float) para2flash[26];//read attract pump set value from flash
+	RANGE_VARIABLE(0,600,presetnpressure);
    
     switch(para2flash[18])
     {
@@ -157,13 +159,21 @@ void DwinSetVariate()//set and display variate
 			ClearUsart_Buf(); 
 			USART_RX_STA=0;
 		}
-		if( FLOWPRESS )//if flow any set button pressed
-		{   
+		if (FLOWPRESS) // if flow any set button pressed
+		{
 			flowsetvalue = USART_BUF[7]*256 + USART_BUF[8];
 			motogear = flowsetvalue;
 			DwinDisplayVariate( FLOWSETADDR,flowsetvalue );//display flow set value 
 			ClearUsart_Buf(); 
-			USART_RX_STA=0;			
+			USART_RX_STA=0;
+		}
+		if (ATTRACT_PUMP_SETVAL_ADDRESS) // get the attract pump set value massage
+		{
+			presetnpressure = (u16)USART_BUF[7] * 256 + (u16)USART_BUF[8];
+			RANGE_VARIABLE(0, 600, presetnpressure);
+			DwinDisplayVariate(NPDISADDR, (u16)presetnpressure);
+			ClearUsart_Buf();
+			STMFLASH_Write(FLASH_SAVE_ADDR,(u16*)para2flash,parameternum);//将参数存进flash中
 		}
 	}    
 }
