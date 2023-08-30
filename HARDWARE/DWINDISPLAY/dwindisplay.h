@@ -1,3 +1,11 @@
+/*
+ * @fileName: 
+ * @Author: Jone
+ * @LastEditors: Jone
+ * @description: page description
+ * @Date: 2023-08-30 10:08:09
+ * @LastEditTime: 2023-08-30 13:23:29
+ */
 #ifndef _dwindisplay_H
 #define _dwindisplay_H
 #include "sys.h"
@@ -8,7 +16,7 @@
 #define START        0
 #define STOP         1
 
-#define parameternum   26//paramete numbers need to save to flash 
+#define parameternum   27//paramete numbers need to save to flash 
 
 #define PRESSUREDISADDR       0x0000 
 #define PRESSURESETADDR       0x0002
@@ -51,6 +59,17 @@
 #define ART_PRESS          USART_BUF[2]==0x06&&USART_BUF[3]==0x83&&USART_BUF[4]==0x00&&USART_BUF[5]==0x67&&USART_BUF[6]==0x01&&USART_BUF[7]==0x00&&USART_BUF[8]==0x06	          
 #define CYS_PRESS          USART_BUF[2]==0x06&&USART_BUF[3]==0x83&&USART_BUF[4]==0x00&&USART_BUF[5]==0x67&&USART_BUF[6]==0x01&&USART_BUF[7]==0x00&&USART_BUF[8]==0x07	          
 
+#define ATTRACT_PUMP_SETVAL_ADDRESS USART_BUF[2]==0x06&&USART_BUF[3]==0x83&&USART_BUF[4]==0x11&&USART_BUF[5]==0x19&&USART_BUF[6]==0x01
+
+#define RANGE_VARIABLE(minimum_value,maximum_value,value)  			if (value < minimum_value)/
+																	{/
+																		value = minimum_value;/
+																	}/
+																	if (value > maximum_value)/
+																	{/
+																		value = maximum_value;/
+																	}
+                                                                    
 void DwinDisplayInit(void);
 void DwindisplayInterface( u16 id );//interface id
 void DwinDisplayVariate(u16 displayaddr,u16 displayvalue);//display variate
