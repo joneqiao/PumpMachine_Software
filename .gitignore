@@ -1,17 +1,7 @@
 
-*.log
-USER/.vscode/c_cpp_properties.json
-USER/.vscode/c_cpp_properties.json
-USER/.vscode/keil-assistant.log
-USER/.vscode/c_cpp_properties.json
-USER/.vscode/keil-assistant.log
-*.json
-USER/.vscode/c_cpp_properties.json
-*.json
-*.log
-USER/PWM.uvprojx
-OBJ/adc.crf
-OBJ/adc.d
-OBJ/adc.o
-*.d
+OBJ/stm32f1xx_it.o
+OBJ/stm32f1xx_hal_usart.o
+OBJ/stm32f1xx_hal_usart.o
+OBJ/buzzer.o
 *.o
+OBJ/adc.o
