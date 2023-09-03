@@ -34,12 +34,12 @@
 #define XYICONADDR            0x0046
 #define BJICONADDR            0x0042 
 
-#define URT_ICON	          0x0050
-#define PCN_ICON	          0x0051
+#define URT_ICON	            0x0050
+#define PCN_ICON	            0x0051
 #define PCN_P_ICON	          0x0052
-#define UTR_ICON	          0x0053
-#define ART_ICON	          0x0054
-#define CYS_ICON	          0x0055
+#define UTR_ICON	            0x0053
+#define ART_ICON	            0x0054
+#define CYS_ICON	            0x0055
 
 #define MOTORALARMADDR        0X0115
 
@@ -61,14 +61,14 @@
 
 #define ATTRACT_PUMP_SETVAL_ADDRESS USART_BUF[2]==0x06&&USART_BUF[3]==0x83&&USART_BUF[4]==0x11&&USART_BUF[5]==0x19&&USART_BUF[6]==0x01
 
-#define RANGE_VARIABLE(minimum_value,maximum_value,value)  			if (value < minimum_value)/
-																	{/
-																		value = minimum_value;/
-																	}/
-																	if (value > maximum_value)/
-																	{/
-																		value = maximum_value;/
-																	}
+#define RANGE_VARIABLE(minimum_value,maximum_value,value)  			if (value < minimum_value)\
+																																{\
+																																	value = minimum_value;\
+																																}\
+																																if (value > maximum_value)\
+																																{\
+																																	value = maximum_value;\
+																																}
                                                                     
 void DwinDisplayInit(void);
 void DwindisplayInterface( u16 id );//interface id

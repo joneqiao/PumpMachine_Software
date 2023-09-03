@@ -4,7 +4,7 @@
 ..\obj\buzzer.o: ..\USER\stm32f1xx.h
 ..\obj\buzzer.o: ..\USER\stm32f103xe.h
 ..\obj\buzzer.o: ..\CORE\core_cm3.h
-..\obj\buzzer.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\buzzer.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
 ..\obj\buzzer.o: ..\CORE\cmsis_compiler.h
 ..\obj\buzzer.o: ..\CORE\cmsis_armcc.h
 ..\obj\buzzer.o: ..\USER\system_stm32f1xx.h
@@ -13,7 +13,7 @@
 ..\obj\buzzer.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h
 ..\obj\buzzer.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h
 ..\obj\buzzer.o: ..\USER\stm32f1xx.h
-..\obj\buzzer.o: D:\MDK\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\buzzer.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
 ..\obj\buzzer.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h
 ..\obj\buzzer.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h
 ..\obj\buzzer.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h

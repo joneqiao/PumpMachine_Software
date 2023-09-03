@@ -1,8 +1,8 @@
 ..\obj\list.o: ..\FreeRTOS\list.c
-..\obj\list.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\list.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdlib.h
 ..\obj\list.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\list.o: D:\MDK\ARM\ARMCC\Bin\..\include\stddef.h
-..\obj\list.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\list.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
+..\obj\list.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
 ..\obj\list.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\list.o: ..\SYSTEM\sys\sys.h
 ..\obj\list.o: ..\USER\stm32f1xx.h

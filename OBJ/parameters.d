@@ -5,7 +5,7 @@
 ..\obj\parameters.o: ..\USER\stm32f1xx.h
 ..\obj\parameters.o: ..\USER\stm32f103xe.h
 ..\obj\parameters.o: ..\CORE\core_cm3.h
-..\obj\parameters.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\parameters.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
 ..\obj\parameters.o: ..\CORE\cmsis_compiler.h
 ..\obj\parameters.o: ..\CORE\cmsis_armcc.h
 ..\obj\parameters.o: ..\USER\system_stm32f1xx.h
@@ -14,7 +14,7 @@
 ..\obj\parameters.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h
 ..\obj\parameters.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h
 ..\obj\parameters.o: ..\USER\stm32f1xx.h
-..\obj\parameters.o: D:\MDK\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\parameters.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
 ..\obj\parameters.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h
 ..\obj\parameters.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h
 ..\obj\parameters.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h
@@ -60,7 +60,7 @@
 ..\obj\parameters.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h
 ..\obj\parameters.o: ..\SYSTEM\delay\delay.h
 ..\obj\parameters.o: ..\SYSTEM\usart\usart.h
-..\obj\parameters.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\parameters.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdio.h
 ..\obj\parameters.o: ..\HARDWARE\LED\led.h
 ..\obj\parameters.o: ..\HARDWARE\PWM\pwm.h
 ..\obj\parameters.o: ..\HARDWARE\KEY\key.h
@@ -78,4 +78,4 @@
 ..\obj\parameters.o: ..\HARDWARE\BUZZER\buzzer.h
 ..\obj\parameters.o: ..\HARDWARE\CMOS\cmos.h
 ..\obj\parameters.o: ..\HARDWARE\PID\PID.h
-..\obj\parameters.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\parameters.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdlib.h

@@ -4,7 +4,7 @@
 ..\obj\delay.o: ..\USER\stm32f1xx.h
 ..\obj\delay.o: ..\USER\stm32f103xe.h
 ..\obj\delay.o: ..\CORE\core_cm3.h
-..\obj\delay.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\delay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
 ..\obj\delay.o: ..\CORE\cmsis_compiler.h
 ..\obj\delay.o: ..\CORE\cmsis_armcc.h
 ..\obj\delay.o: ..\USER\system_stm32f1xx.h
@@ -13,7 +13,7 @@
 ..\obj\delay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h
 ..\obj\delay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h
 ..\obj\delay.o: ..\USER\stm32f1xx.h
-..\obj\delay.o: D:\MDK\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\delay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
 ..\obj\delay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h
 ..\obj\delay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h
 ..\obj\delay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h

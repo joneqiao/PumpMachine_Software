@@ -1,0 +1,17 @@
+
+*.log
+USER/.vscode/c_cpp_properties.json
+USER/.vscode/c_cpp_properties.json
+USER/.vscode/keil-assistant.log
+USER/.vscode/c_cpp_properties.json
+USER/.vscode/keil-assistant.log
+*.json
+USER/.vscode/c_cpp_properties.json
+*.json
+*.log
+USER/PWM.uvprojx
+OBJ/adc.crf
+OBJ/adc.d
+OBJ/adc.o
+*.d
+*.o
