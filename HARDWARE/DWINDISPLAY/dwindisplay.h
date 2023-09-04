@@ -59,16 +59,16 @@
 #define ART_PRESS          USART_BUF[2]==0x06&&USART_BUF[3]==0x83&&USART_BUF[4]==0x00&&USART_BUF[5]==0x67&&USART_BUF[6]==0x01&&USART_BUF[7]==0x00&&USART_BUF[8]==0x06	          
 #define CYS_PRESS          USART_BUF[2]==0x06&&USART_BUF[3]==0x83&&USART_BUF[4]==0x00&&USART_BUF[5]==0x67&&USART_BUF[6]==0x01&&USART_BUF[7]==0x00&&USART_BUF[8]==0x07	          
 
-#define ATTRACT_PUMP_SETVAL_ADDRESS USART_BUF[2]==0x06&&USART_BUF[3]==0x83&&USART_BUF[4]==0x11&&USART_BUF[5]==0x19&&USART_BUF[6]==0x01
+#define ATTRACT_PUMP_SETVAL_ADDRESS USART_BUF[2]==0x06&&USART_BUF[3]==0x83&&USART_BUF[4]==0x20&&USART_BUF[5]==0x23&&USART_BUF[6]==0x01
 
 #define RANGE_VARIABLE(minimum_value,maximum_value,value)  			if (value < minimum_value)\
-																																{\
-																																	value = minimum_value;\
-																																}\
-																																if (value > maximum_value)\
-																																{\
-																																	value = maximum_value;\
-																																}
+                                                                    {\
+                                                                        value = minimum_value;\
+                                                                    }\
+                                                                    if (value > maximum_value)\
+                                                                    {\
+                                                                        value = maximum_value;\
+                                                                    }
                                                                     
 void DwinDisplayInit(void);
 void DwindisplayInterface( u16 id );//interface id

@@ -1,7 +1,7 @@
 Dependencies for Project 'PWM', Target 'PWM': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\Compiler5.06
-F (.\main.c)(0x64EF4F3B)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
-I (..\HARDWARE\PARAMETES\parameters.h)(0x64EF4F3B)
+F (.\main.c)(0x64F59576)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+I (..\HARDWARE\PARAMETES\parameters.h)(0x64F59423)
 I (..\HARDWARE\EXTI\exti.h)(0x64EEF2EC)
 I (..\SYSTEM\sys\sys.h)(0x5A3CB19C)
 I (..\USER\stm32f1xx.h)(0x5D1623CC)
@@ -64,13 +64,13 @@ I (..\SYSTEM\usart\usart.h)(0x5F33E36E)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdio.h)(0x5E8E9122)
 I (..\HARDWARE\LED\led.h)(0x64EEF2EC)
 I (..\HARDWARE\PWM\pwm.h)(0x64EEF2EC)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\HARDWARE\ADC\adc.h)(0x64EEF2EC)
 I (..\HARDWARE\IIC\myiic.h)(0x64EEF2EC)
 I (..\HARDWARE\IWDG\iwdg.h)(0x64EEF2EC)
 I (..\HARDWARE\TIMER\timer.h)(0x64EEF2EC)
 I (..\HARDWARE\TEXTDISPLAY\textdisplay.h)(0x64EEF2EC)
-I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F4E119)
+I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F59423)
 I (..\HARDWARE\SELFTESTFUNCATION\selftestfuncation.h)(0x64EEF2EC)
 I (..\HARDWARE\STMFLASH\stmflash.h)(0x64EEF2EC)
 I (..\HARDWARE\DS2502\ds2502.h)(0x64EEF2EC)
@@ -1532,10 +1532,10 @@ I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd_ex.h)(0x5D10A086)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_hcd.h)(0x5D10A086)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h)(0x5D10A078)
 I (..\SYSTEM\delay\delay.h)(0x5A3CA7A0)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\HARDWARE\LED\led.h)(0x64EEF2EC)
 F (..\HARDWARE\KEY\key.c)(0x64EEF2EC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\SYSTEM\sys\sys.h)(0x5A3CB19C)
 I (..\USER\stm32f1xx.h)(0x5D1623CC)
 I (..\USER\stm32f103xe.h)(0x629D9F32)
@@ -1592,7 +1592,7 @@ I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_ll_usb.h)(0x5D138992)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd_ex.h)(0x5D10A086)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_hcd.h)(0x5D10A086)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h)(0x5D10A078)
-I (..\HARDWARE\PARAMETES\parameters.h)(0x64EF4F3B)
+I (..\HARDWARE\PARAMETES\parameters.h)(0x64F59423)
 I (..\HARDWARE\EXTI\exti.h)(0x64EEF2EC)
 I (..\SYSTEM\delay\delay.h)(0x5A3CA7A0)
 I (..\SYSTEM\usart\usart.h)(0x5F33E36E)
@@ -1604,7 +1604,7 @@ I (..\HARDWARE\IIC\myiic.h)(0x64EEF2EC)
 I (..\HARDWARE\IWDG\iwdg.h)(0x64EEF2EC)
 I (..\HARDWARE\TIMER\timer.h)(0x64EEF2EC)
 I (..\HARDWARE\TEXTDISPLAY\textdisplay.h)(0x64EEF2EC)
-I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F4E119)
+I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F59423)
 I (..\HARDWARE\SELFTESTFUNCATION\selftestfuncation.h)(0x64EEF2EC)
 I (..\HARDWARE\STMFLASH\stmflash.h)(0x64EEF2EC)
 I (..\HARDWARE\DS2502\ds2502.h)(0x64EEF2EC)
@@ -1674,8 +1674,8 @@ I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_hcd.h)(0x5D10A086)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h)(0x5D10A078)
 I (..\SYSTEM\delay\delay.h)(0x5A3CA7A0)
 I (C:\MDK\path\ARM\Compiler5.06\include\math.h)(0x5E8E9122)
-F (..\HARDWARE\PARAMETES\parameters.c)(0x64EF4F3B)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\parameters.o --omf_browse ..\obj\parameters.crf --depend ..\obj\parameters.d)
-I (..\HARDWARE\PARAMETES\parameters.h)(0x64EF4F3B)
+F (..\HARDWARE\PARAMETES\parameters.c)(0x64F59423)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\parameters.o --omf_browse ..\obj\parameters.crf --depend ..\obj\parameters.d)
+I (..\HARDWARE\PARAMETES\parameters.h)(0x64F59423)
 I (..\HARDWARE\EXTI\exti.h)(0x64EEF2EC)
 I (..\SYSTEM\sys\sys.h)(0x5A3CB19C)
 I (..\USER\stm32f1xx.h)(0x5D1623CC)
@@ -1738,13 +1738,13 @@ I (..\SYSTEM\usart\usart.h)(0x5F33E36E)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdio.h)(0x5E8E9122)
 I (..\HARDWARE\LED\led.h)(0x64EEF2EC)
 I (..\HARDWARE\PWM\pwm.h)(0x64EEF2EC)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\HARDWARE\ADC\adc.h)(0x64EEF2EC)
 I (..\HARDWARE\IIC\myiic.h)(0x64EEF2EC)
 I (..\HARDWARE\IWDG\iwdg.h)(0x64EEF2EC)
 I (..\HARDWARE\TIMER\timer.h)(0x64EEF2EC)
 I (..\HARDWARE\TEXTDISPLAY\textdisplay.h)(0x64EEF2EC)
-I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F4E119)
+I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F59423)
 I (..\HARDWARE\SELFTESTFUNCATION\selftestfuncation.h)(0x64EEF2EC)
 I (..\HARDWARE\STMFLASH\stmflash.h)(0x64EEF2EC)
 I (..\HARDWARE\DS2502\ds2502.h)(0x64EEF2EC)
@@ -1755,7 +1755,7 @@ I (..\HARDWARE\CMOS\cmos.h)(0x64EEF2EC)
 I (..\HARDWARE\PID\PID.h)(0x64EEF2EC)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdlib.h)(0x5E8E9122)
 F (..\HARDWARE\TEXTDISPLAY\textdisplay.c)(0x64EEF2EC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\textdisplay.o --omf_browse ..\obj\textdisplay.crf --depend ..\obj\textdisplay.d)
-I (..\HARDWARE\PARAMETES\parameters.h)(0x64EF4F3B)
+I (..\HARDWARE\PARAMETES\parameters.h)(0x64F59423)
 I (..\HARDWARE\EXTI\exti.h)(0x64EEF2EC)
 I (..\SYSTEM\sys\sys.h)(0x5A3CB19C)
 I (..\USER\stm32f1xx.h)(0x5D1623CC)
@@ -1818,13 +1818,13 @@ I (..\SYSTEM\usart\usart.h)(0x5F33E36E)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdio.h)(0x5E8E9122)
 I (..\HARDWARE\LED\led.h)(0x64EEF2EC)
 I (..\HARDWARE\PWM\pwm.h)(0x64EEF2EC)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\HARDWARE\ADC\adc.h)(0x64EEF2EC)
 I (..\HARDWARE\IIC\myiic.h)(0x64EEF2EC)
 I (..\HARDWARE\IWDG\iwdg.h)(0x64EEF2EC)
 I (..\HARDWARE\TIMER\timer.h)(0x64EEF2EC)
 I (..\HARDWARE\TEXTDISPLAY\textdisplay.h)(0x64EEF2EC)
-I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F4E119)
+I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F59423)
 I (..\HARDWARE\SELFTESTFUNCATION\selftestfuncation.h)(0x64EEF2EC)
 I (..\HARDWARE\STMFLASH\stmflash.h)(0x64EEF2EC)
 I (..\HARDWARE\DS2502\ds2502.h)(0x64EEF2EC)
@@ -1834,8 +1834,8 @@ I (..\HARDWARE\BUZZER\buzzer.h)(0x64EEF2EC)
 I (..\HARDWARE\CMOS\cmos.h)(0x64EEF2EC)
 I (..\HARDWARE\PID\PID.h)(0x64EEF2EC)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdlib.h)(0x5E8E9122)
-F (..\HARDWARE\DWINDISPLAY\dwindisplay.c)(0x64EF4F3B)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\dwindisplay.o --omf_browse ..\obj\dwindisplay.crf --depend ..\obj\dwindisplay.d)
-I (..\HARDWARE\PARAMETES\parameters.h)(0x64EF4F3B)
+F (..\HARDWARE\DWINDISPLAY\dwindisplay.c)(0x64F59423)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\dwindisplay.o --omf_browse ..\obj\dwindisplay.crf --depend ..\obj\dwindisplay.d)
+I (..\HARDWARE\PARAMETES\parameters.h)(0x64F59423)
 I (..\HARDWARE\EXTI\exti.h)(0x64EEF2EC)
 I (..\SYSTEM\sys\sys.h)(0x5A3CB19C)
 I (..\USER\stm32f1xx.h)(0x5D1623CC)
@@ -1898,13 +1898,13 @@ I (..\SYSTEM\usart\usart.h)(0x5F33E36E)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdio.h)(0x5E8E9122)
 I (..\HARDWARE\LED\led.h)(0x64EEF2EC)
 I (..\HARDWARE\PWM\pwm.h)(0x64EEF2EC)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\HARDWARE\ADC\adc.h)(0x64EEF2EC)
 I (..\HARDWARE\IIC\myiic.h)(0x64EEF2EC)
 I (..\HARDWARE\IWDG\iwdg.h)(0x64EEF2EC)
 I (..\HARDWARE\TIMER\timer.h)(0x64EEF2EC)
 I (..\HARDWARE\TEXTDISPLAY\textdisplay.h)(0x64EEF2EC)
-I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F4E119)
+I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F59423)
 I (..\HARDWARE\SELFTESTFUNCATION\selftestfuncation.h)(0x64EEF2EC)
 I (..\HARDWARE\STMFLASH\stmflash.h)(0x64EEF2EC)
 I (..\HARDWARE\DS2502\ds2502.h)(0x64EEF2EC)
@@ -2036,9 +2036,9 @@ I (..\HARDWARE\LED\led.h)(0x64EEF2EC)
 I (..\SYSTEM\usart\usart.h)(0x5F33E36E)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdio.h)(0x5E8E9122)
 I (..\HARDWARE\CMOS\cmos.h)(0x64EEF2EC)
-I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F4E119)
+I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F59423)
 I (..\SYSTEM\delay\delay.h)(0x5A3CA7A0)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\HARDWARE\CONTROL\control.h)(0x64EEF2EC)
 F (..\HARDWARE\STMFLASH\stmflash.c)(0x64EEF2EC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\stmflash.o --omf_browse ..\obj\stmflash.crf --depend ..\obj\stmflash.d)
 I (..\HARDWARE\STMFLASH\stmflash.h)(0x64EEF2EC)
@@ -2159,14 +2159,14 @@ I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_ll_usb.h)(0x5D138992)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd_ex.h)(0x5D10A086)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_hcd.h)(0x5D10A086)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h)(0x5D10A078)
-I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F4E119)
+I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F59423)
 I (..\HARDWARE\PWM\pwm.h)(0x64EEF2EC)
 I (..\HARDWARE\IWDG\iwdg.h)(0x64EEF2EC)
 I (..\HARDWARE\ADC\adc.h)(0x64EEF2EC)
 I (..\HARDWARE\SELFTESTFUNCATION\selftestfuncation.h)(0x64EEF2EC)
 I (..\HARDWARE\STMFLASH\stmflash.h)(0x64EEF2EC)
 I (..\HARDWARE\LED\led.h)(0x64EEF2EC)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\HARDWARE\CMOS\cmos.h)(0x64EEF2EC)
 I (..\SYSTEM\delay\delay.h)(0x5A3CA7A0)
 I (..\FreeRTOS\include\FreeRTOS.h)(0x573F3A18)
@@ -2180,7 +2180,7 @@ I (..\FreeRTOS\include\task.h)(0x573F3A18)
 I (..\FreeRTOS\include\list.h)(0x573F3A18)
 I (..\SYSTEM\usart\usart.h)(0x5F33E36E)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdio.h)(0x5E8E9122)
-I (..\HARDWARE\PARAMETES\parameters.h)(0x64EF4F3B)
+I (..\HARDWARE\PARAMETES\parameters.h)(0x64F59423)
 I (..\HARDWARE\EXTI\exti.h)(0x64EEF2EC)
 I (..\HARDWARE\IIC\myiic.h)(0x64EEF2EC)
 I (..\HARDWARE\TIMER\timer.h)(0x64EEF2EC)
@@ -2191,7 +2191,7 @@ I (..\HARDWARE\BUZZER\buzzer.h)(0x64EEF2EC)
 I (..\HARDWARE\PID\PID.h)(0x64EEF2EC)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdlib.h)(0x5E8E9122)
 F (..\HARDWARE\CONTROL\control.c)(0x64EEF2EC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\control.o --omf_browse ..\obj\control.crf --depend ..\obj\control.d)
-I (..\HARDWARE\PARAMETES\parameters.h)(0x64EF4F3B)
+I (..\HARDWARE\PARAMETES\parameters.h)(0x64F59423)
 I (..\HARDWARE\EXTI\exti.h)(0x64EEF2EC)
 I (..\SYSTEM\sys\sys.h)(0x5A3CB19C)
 I (..\USER\stm32f1xx.h)(0x5D1623CC)
@@ -2254,13 +2254,13 @@ I (..\SYSTEM\usart\usart.h)(0x5F33E36E)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdio.h)(0x5E8E9122)
 I (..\HARDWARE\LED\led.h)(0x64EEF2EC)
 I (..\HARDWARE\PWM\pwm.h)(0x64EEF2EC)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\HARDWARE\ADC\adc.h)(0x64EEF2EC)
 I (..\HARDWARE\IIC\myiic.h)(0x64EEF2EC)
 I (..\HARDWARE\IWDG\iwdg.h)(0x64EEF2EC)
 I (..\HARDWARE\TIMER\timer.h)(0x64EEF2EC)
 I (..\HARDWARE\TEXTDISPLAY\textdisplay.h)(0x64EEF2EC)
-I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F4E119)
+I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F59423)
 I (..\HARDWARE\SELFTESTFUNCATION\selftestfuncation.h)(0x64EEF2EC)
 I (..\HARDWARE\STMFLASH\stmflash.h)(0x64EEF2EC)
 I (..\HARDWARE\DS2502\ds2502.h)(0x64EEF2EC)
@@ -2446,18 +2446,18 @@ I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pcd_ex.h)(0x5D10A086)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_hcd.h)(0x5D10A086)
 I (..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h)(0x5D10A078)
 I (..\HARDWARE\LED\led.h)(0x64EEF2EC)
-I (..\HARDWARE\PARAMETES\parameters.h)(0x64EF4F3B)
+I (..\HARDWARE\PARAMETES\parameters.h)(0x64F59423)
 I (..\HARDWARE\EXTI\exti.h)(0x64EEF2EC)
 I (..\SYSTEM\delay\delay.h)(0x5A3CA7A0)
 I (..\SYSTEM\usart\usart.h)(0x5F33E36E)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdio.h)(0x5E8E9122)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\HARDWARE\ADC\adc.h)(0x64EEF2EC)
 I (..\HARDWARE\IIC\myiic.h)(0x64EEF2EC)
 I (..\HARDWARE\IWDG\iwdg.h)(0x64EEF2EC)
 I (..\HARDWARE\TIMER\timer.h)(0x64EEF2EC)
 I (..\HARDWARE\TEXTDISPLAY\textdisplay.h)(0x64EEF2EC)
-I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F4E119)
+I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F59423)
 I (..\HARDWARE\SELFTESTFUNCATION\selftestfuncation.h)(0x64EEF2EC)
 I (..\HARDWARE\STMFLASH\stmflash.h)(0x64EEF2EC)
 I (..\HARDWARE\DS2502\ds2502.h)(0x64EEF2EC)
@@ -2478,7 +2478,7 @@ I (..\FreeRTOS\include\task.h)(0x573F3A18)
 I (..\FreeRTOS\include\list.h)(0x573F3A18)
 F (..\HARDWARE\PID\PID.c)(0x64EEF2EC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\CORE -I ..\USER -I ..\OBJ -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HALLIB\STM32F1xx_HAL_Driver\Inc -I ..\HARDWARE\LED -I ..\HARDWARE\PWM -I ..\HARDWARE\KEY -I ..\HARDWARE\ADC -I ..\HARDWARE\PARAMETES -I ..\HARDWARE\TEXTDISPLAY -I ..\HARDWARE\SELFTESTFUNCATION -I ..\HARDWARE\DWINDISPLAY -I ..\HARDWARE\IIC -I ..\HARDWARE\IWDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\STMFLASH -I ..\HARDWARE\DS2502 -I ..\HARDWARE\FACTORYMODE -I ..\HARDWARE\CONTROL -I ..\HARDWARE\BUZZER -I ..\HARDWARE\EXTI -I ..\HARDWARE\CMOS -I ..\FreeRTOS\include -I ..\FreeRTOS\portable\RVDS\ARM_CM3 -I ..\HARDWARE\PID-IC:\MDK\others\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="538" -DSTM32F10X_HD -DUSE_HAL_DRIVER -DSTM32F103xE-o ..\obj\pid.o --omf_browse ..\obj\pid.crf --depend ..\obj\pid.d)
 I (..\HARDWARE\PID\PID.h)(0x64EEF2EC)
-I (..\HARDWARE\PARAMETES\parameters.h)(0x64EF4F3B)
+I (..\HARDWARE\PARAMETES\parameters.h)(0x64F59423)
 I (..\HARDWARE\EXTI\exti.h)(0x64EEF2EC)
 I (..\SYSTEM\sys\sys.h)(0x5A3CB19C)
 I (..\USER\stm32f1xx.h)(0x5D1623CC)
@@ -2541,13 +2541,13 @@ I (..\SYSTEM\usart\usart.h)(0x5F33E36E)
 I (C:\MDK\path\ARM\Compiler5.06\include\stdio.h)(0x5E8E9122)
 I (..\HARDWARE\LED\led.h)(0x64EEF2EC)
 I (..\HARDWARE\PWM\pwm.h)(0x64EEF2EC)
-I (..\HARDWARE\KEY\key.h)(0x64EF4F3B)
+I (..\HARDWARE\KEY\key.h)(0x64F59423)
 I (..\HARDWARE\ADC\adc.h)(0x64EEF2EC)
 I (..\HARDWARE\IIC\myiic.h)(0x64EEF2EC)
 I (..\HARDWARE\IWDG\iwdg.h)(0x64EEF2EC)
 I (..\HARDWARE\TIMER\timer.h)(0x64EEF2EC)
 I (..\HARDWARE\TEXTDISPLAY\textdisplay.h)(0x64EEF2EC)
-I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F4E119)
+I (..\HARDWARE\DWINDISPLAY\dwindisplay.h)(0x64F59423)
 I (..\HARDWARE\SELFTESTFUNCATION\selftestfuncation.h)(0x64EEF2EC)
 I (..\HARDWARE\STMFLASH\stmflash.h)(0x64EEF2EC)
 I (..\HARDWARE\DS2502\ds2502.h)(0x64EEF2EC)
@@ -3100,4 +3100,4 @@ I (..\FreeRTOS\portable\RVDS\ARM_CM3\portmacro.h)(0x573F3A18)
 I (..\FreeRTOS\include\mpu_wrappers.h)(0x573F3A18)
 I (..\FreeRTOS\include\task.h)(0x573F3A18)
 I (..\FreeRTOS\include\list.h)(0x573F3A18)
-F (..\readme.txt)(0x64EF3FD6)()
+F (..\readme.txt)(0x64F59424)()

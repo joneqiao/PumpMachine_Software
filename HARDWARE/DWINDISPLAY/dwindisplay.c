@@ -69,7 +69,7 @@ void DwinDisplayInit()                              //initial display
         default:break;
     }
     
-    DwinDisplayText(VERSIONADD);
+
 	DwinDisplayVariate(WATERHIGHTADD,waterhight);//send water high set value to water high set address  
     DwinDisplayVariate(PRESSURESETADDR,pressuresetvalue);//display pressure set value     
     DwinDisplayVariate(FLOWSETADDR,flowsetvalue);//display flow set value  
@@ -79,7 +79,9 @@ void DwinDisplayInit()                              //initial display
     DwinDisplayVariate(CHULIKADD,chulik*100);//send chuli k value to flow set address 
     DwinDisplayVariate(CHULIBADD,chulib*100);//send chuli b value to flow set address 
     DwinDisplayVariate(NPKADD,negativepressureK*100);//send negativepressure K value to flow set address 
-    DwinDisplayVariate(NPBADD,negativepressureB*100);//send negativepressure B value to flow set address   
+    DwinDisplayVariate(NPBADD,negativepressureB*100);//send negativepressure B value to flow set address  
+    DwinDisplayText(VERSIONADD);
+ 
 } 
 
 void DwindisplayInterface( u16 id )//interface id
@@ -172,6 +174,7 @@ void DwinSetVariate()//set and display variate
 			presetnpressure = (u16)USART_BUF[7] * 256 + (u16)USART_BUF[8];
 			RANGE_VARIABLE(0, 600, presetnpressure);
 			DwinDisplayVariate(NPDISADDR, (u16)presetnpressure);
+            para2flash[26] = presetnpressure;
 			ClearUsart_Buf();
 			STMFLASH_Write(FLASH_SAVE_ADDR,(u16*)para2flash,parameternum);//将参数存进flash中
 		}

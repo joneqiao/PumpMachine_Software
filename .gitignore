@@ -5,3 +5,8 @@ OBJ/stm32f1xx_hal_usart.o
 OBJ/buzzer.o
 *.o
 OBJ/adc.o
+*.json
+OBJ/control.crf
+*.crf
+*.axf
+*.htm

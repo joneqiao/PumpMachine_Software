@@ -165,18 +165,24 @@ void delay_task(void *pvParameters)
 			FlowDisplay(0,0); 
 		}
 
-		if (EnterFactorymode)
+		if(EnterFactorymode)
 		{
-			DwinDisplayVariate(CLDISADDR, (u16)chuli_current_val);   // display chu li sensor value
-			if (xyiconstatue & 0x00 && JiaoTaFlag == RESET)     	 // attract pump disable
-			{
-				DwinDisplayVariate(NPDISADDR, (u16)presetnpressure); // display negative pressure set value
-			}
-			else// attract pump enable
-			{
-				DwinDisplayVariate(NPDISADDR, (u16)negative_pressure_current_val); // display negative pressure sensor value
-			}
+			DwinDisplayVariate(CLDISADDR,(u16)chuli_current_val);//display chu li sensor value     
+			DwinDisplayVariate( NPDISADDR,(u16)negative_pressure_current_val );//display negative pressure sensor value     
 		}
+		else
+		{
+				if (xyiconstatue & 0x01 && JiaoTaFlag == RESET)     	 // attract pump disable
+				{
+					DwinDisplayVariate(NPDISADDR, (u16)negative_pressure_current_val); // display negative pressure sensor value
+				}
+				else// attract pump enable
+				{
+					DwinDisplayVariate(NPDISADDR, (u16)presetnpressure); // display negative pressure set value
+				}	
+		}
+		
+			
 		if(chulilongpressbuzzerflag)
         {
             BUZZER = 1;
