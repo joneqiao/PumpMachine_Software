@@ -5,7 +5,7 @@
 ..\obj\dwindisplay.o: ..\USER\stm32f1xx.h
 ..\obj\dwindisplay.o: ..\USER\stm32f103xe.h
 ..\obj\dwindisplay.o: ..\CORE\core_cm3.h
-..\obj\dwindisplay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
+..\obj\dwindisplay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\dwindisplay.o: ..\CORE\cmsis_compiler.h
 ..\obj\dwindisplay.o: ..\CORE\cmsis_armcc.h
 ..\obj\dwindisplay.o: ..\USER\system_stm32f1xx.h
@@ -14,7 +14,7 @@
 ..\obj\dwindisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h
 ..\obj\dwindisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h
 ..\obj\dwindisplay.o: ..\USER\stm32f1xx.h
-..\obj\dwindisplay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
+..\obj\dwindisplay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\dwindisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h
 ..\obj\dwindisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h
 ..\obj\dwindisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h
@@ -60,7 +60,7 @@
 ..\obj\dwindisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h
 ..\obj\dwindisplay.o: ..\SYSTEM\delay\delay.h
 ..\obj\dwindisplay.o: ..\SYSTEM\usart\usart.h
-..\obj\dwindisplay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdio.h
+..\obj\dwindisplay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\dwindisplay.o: ..\HARDWARE\LED\led.h
 ..\obj\dwindisplay.o: ..\HARDWARE\PWM\pwm.h
 ..\obj\dwindisplay.o: ..\HARDWARE\KEY\key.h
@@ -78,5 +78,5 @@
 ..\obj\dwindisplay.o: ..\HARDWARE\BUZZER\buzzer.h
 ..\obj\dwindisplay.o: ..\HARDWARE\CMOS\cmos.h
 ..\obj\dwindisplay.o: ..\HARDWARE\PID\PID.h
-..\obj\dwindisplay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdlib.h
-..\obj\dwindisplay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\string.h
+..\obj\dwindisplay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\dwindisplay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

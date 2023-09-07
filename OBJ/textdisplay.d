@@ -5,7 +5,7 @@
 ..\obj\textdisplay.o: ..\USER\stm32f1xx.h
 ..\obj\textdisplay.o: ..\USER\stm32f103xe.h
 ..\obj\textdisplay.o: ..\CORE\core_cm3.h
-..\obj\textdisplay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
+..\obj\textdisplay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\textdisplay.o: ..\CORE\cmsis_compiler.h
 ..\obj\textdisplay.o: ..\CORE\cmsis_armcc.h
 ..\obj\textdisplay.o: ..\USER\system_stm32f1xx.h
@@ -14,7 +14,7 @@
 ..\obj\textdisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h
 ..\obj\textdisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h
 ..\obj\textdisplay.o: ..\USER\stm32f1xx.h
-..\obj\textdisplay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
+..\obj\textdisplay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\textdisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h
 ..\obj\textdisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h
 ..\obj\textdisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h
@@ -60,7 +60,7 @@
 ..\obj\textdisplay.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_mmc.h
 ..\obj\textdisplay.o: ..\SYSTEM\delay\delay.h
 ..\obj\textdisplay.o: ..\SYSTEM\usart\usart.h
-..\obj\textdisplay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdio.h
+..\obj\textdisplay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\textdisplay.o: ..\HARDWARE\LED\led.h
 ..\obj\textdisplay.o: ..\HARDWARE\PWM\pwm.h
 ..\obj\textdisplay.o: ..\HARDWARE\KEY\key.h
@@ -78,4 +78,4 @@
 ..\obj\textdisplay.o: ..\HARDWARE\BUZZER\buzzer.h
 ..\obj\textdisplay.o: ..\HARDWARE\CMOS\cmos.h
 ..\obj\textdisplay.o: ..\HARDWARE\PID\PID.h
-..\obj\textdisplay.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdlib.h
+..\obj\textdisplay.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

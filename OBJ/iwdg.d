@@ -4,7 +4,7 @@
 ..\obj\iwdg.o: ..\USER\stm32f1xx.h
 ..\obj\iwdg.o: ..\USER\stm32f103xe.h
 ..\obj\iwdg.o: ..\CORE\core_cm3.h
-..\obj\iwdg.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
+..\obj\iwdg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\iwdg.o: ..\CORE\cmsis_compiler.h
 ..\obj\iwdg.o: ..\CORE\cmsis_armcc.h
 ..\obj\iwdg.o: ..\USER\system_stm32f1xx.h
@@ -13,7 +13,7 @@
 ..\obj\iwdg.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h
 ..\obj\iwdg.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h
 ..\obj\iwdg.o: ..\USER\stm32f1xx.h
-..\obj\iwdg.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
+..\obj\iwdg.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\iwdg.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h
 ..\obj\iwdg.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h
 ..\obj\iwdg.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h

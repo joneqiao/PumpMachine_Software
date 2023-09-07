@@ -134,6 +134,8 @@ void MotorSpeedUp(u16 motorarrup)//  motorarr >= 2500  DM422 max300 khz
     while((u16)chuli_current_val <= (pressuresetvalue - 15) && ((bjiconstatue&0x01) == 1))
     {
         XiYinControl();//在加速过程中也能对吸引泵进行控制
+        ExternalButtonSwitch();
+        FeetSwitch();
         delay_ms(15);
         speedtimecount++;
         if(speedtimecount%2==0)

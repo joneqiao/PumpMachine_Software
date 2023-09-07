@@ -1,8 +1,8 @@
 ..\obj\event_groups.o: ..\FreeRTOS\event_groups.c
-..\obj\event_groups.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdlib.h
+..\obj\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\event_groups.o: ..\FreeRTOS\include\FreeRTOS.h
-..\obj\event_groups.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
-..\obj\event_groups.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
+..\obj\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\obj\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\event_groups.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\event_groups.o: ..\SYSTEM\sys\sys.h
 ..\obj\event_groups.o: ..\USER\stm32f1xx.h

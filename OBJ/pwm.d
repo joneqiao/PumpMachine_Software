@@ -4,7 +4,7 @@
 ..\obj\pwm.o: ..\USER\stm32f1xx.h
 ..\obj\pwm.o: ..\USER\stm32f103xe.h
 ..\obj\pwm.o: ..\CORE\core_cm3.h
-..\obj\pwm.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
+..\obj\pwm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\pwm.o: ..\CORE\cmsis_compiler.h
 ..\obj\pwm.o: ..\CORE\cmsis_armcc.h
 ..\obj\pwm.o: ..\USER\system_stm32f1xx.h
@@ -13,7 +13,7 @@
 ..\obj\pwm.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h
 ..\obj\pwm.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h
 ..\obj\pwm.o: ..\USER\stm32f1xx.h
-..\obj\pwm.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
+..\obj\pwm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\pwm.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h
 ..\obj\pwm.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h
 ..\obj\pwm.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h
@@ -62,7 +62,7 @@
 ..\obj\pwm.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\pwm.o: ..\SYSTEM\delay\delay.h
 ..\obj\pwm.o: ..\SYSTEM\usart\usart.h
-..\obj\pwm.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdio.h
+..\obj\pwm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\pwm.o: ..\HARDWARE\KEY\key.h
 ..\obj\pwm.o: ..\HARDWARE\ADC\adc.h
 ..\obj\pwm.o: ..\HARDWARE\IIC\myiic.h
@@ -78,7 +78,7 @@
 ..\obj\pwm.o: ..\HARDWARE\BUZZER\buzzer.h
 ..\obj\pwm.o: ..\HARDWARE\CMOS\cmos.h
 ..\obj\pwm.o: ..\HARDWARE\PID\PID.h
-..\obj\pwm.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdlib.h
+..\obj\pwm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\obj\pwm.o: ..\FreeRTOS\include\FreeRTOS.h
 ..\obj\pwm.o: ..\FreeRTOS\include\FreeRTOSConfig.h
 ..\obj\pwm.o: ..\FreeRTOS\include\projdefs.h

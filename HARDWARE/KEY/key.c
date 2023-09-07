@@ -1,5 +1,9 @@
 #include "key.h"
 #include "parameters.h"
+#include "exti.h"
+#include "string.h"
+#include "FreeRTOS.h"
+#include "task.h"
 /************************************************
  IRcontroller-HAL库函数版
  技术支持：www.logic-elec.com
@@ -8,7 +12,8 @@
 ************************************************/ 
 extern u8 xyiconstatue;
 u8 JiaoTaFlag = 0;
-
+u8 xiyinflag;
+u8 bujinflag;
 //按键初始化函数
 void KEY_Init(void)
 {
@@ -25,6 +30,64 @@ void KEY_Init(void)
     HAL_GPIO_Init(GPIOA,&GPIO_Initure);
     HAL_GPIO_Init(GPIOB,&GPIO_Initure);
     HAL_GPIO_Init(GPIOC,&GPIO_Initure);
+}
+
+
+u8 XIYIN_BUTTON_Scan(u8 mode)
+{
+    static u8 key_up = 1; // 按键松开标志
+    if (mode == 1)
+        key_up = 1; // 支持连按
+    if (key_up && KEY_XIYIN == 0)
+    {
+        key_up = 0;
+        if (KEY_XIYIN == 0)
+        {
+            xyiconstatue++;
+            DwinBitIconDisplay(XYICONADDR,xyiconstatue&0x01);//display xiyin icon  
+            return 1;
+        }
+    }
+    else if (KEY_XIYIN == 1)
+        key_up = 1;
+    return 0; // 无按键按下
+}
+
+extern float value_buf[NUM];
+extern vs16 para2flash[parameternum];
+extern float speedoffset;
+u8 CHONGXI_BUTTON_Scan(u8 mode)
+{
+    static u8 key_up = 1; // 按键松开标志
+    if (mode == 1)
+        key_up = 1; // 支持连按
+    if (key_up && KEY_CHONGXI == 0)
+    {
+        delay_ms(10);
+        key_up = 0;
+        if (KEY_CHONGXI == 0)
+        {
+			bjiconstatue++;
+			memset(value_buf,0,NUM);	
+			DwinBitIconDisplay(BJICONADDR,bjiconstatue&0x01);//display bujin icon  
+			para2flash[19]= pressuresetvalue;
+			para2flash[20]= flowsetvalue;
+			IWDG_Feed();//feed watch dog befor read data from flash
+			STMFLASH_Write(FLASH_SAVE_ADDR,(u16*)para2flash,parameternum);//read parameters from flash  
+            if((bjiconstatue&0x01)==0)
+                speedoffset=0;   
+            return 1;
+        }
+    }
+    else if (KEY_CHONGXI == 1)
+        key_up = 1;
+    return 0; // 无按键按下
+}
+
+void ExternalButtonSwitch()
+{
+    XIYIN_BUTTON_Scan(0);  
+    CHONGXI_BUTTON_Scan(0);
 }
 
 void FeetSwitch()

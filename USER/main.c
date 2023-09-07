@@ -60,7 +60,7 @@ int main(void)
     LED_Init();							            //init LED	
     MOS_Init();                                     //init MOS control DC moto
     KEY_Init();							            //init key
-	EXTI_Init();						            //init exit interrupt
+//	EXTI_Init();						            //init exit interrupt
     BUZZER_Init();                                  //init buzzer 
 //    IWDG_Init(IWDG_PRESCALER_64,500);  	            //the fractional frequency is 64, the overload value is 500, and the overflow time is 1s   
     TIM3_Init(5000-1,7200-1); 	                    //init timer3, timer3 clock 72M, frequency divison coefficien 7200-1,frequency 72M/7200=10K, automatic reload is 5000-1, timer cycle is 500ms,feed watchdog 
@@ -138,11 +138,12 @@ void real_time_task(void *pvParameters)
 	
     while(1)
     {
+		ExternalButtonSwitch();
 		FeetSwitch();
 		MotorControl();  
 		XiYinControl();
 //		PressureValHandle();  
-		taskYIELD();
+		delay_ms(1);
     }
 }   
 

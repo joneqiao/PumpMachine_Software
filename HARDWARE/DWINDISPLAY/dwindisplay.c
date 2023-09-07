@@ -244,19 +244,18 @@ void ReadDwinKeyValueReturn()//read dwin display keyvalue return
 //            } 
 			USART_RX_STA = 0;
 		}
-		if((XYSTARTPRESS)||xiyinflag)//xiyin start button pressed 
+		if((XYSTARTPRESS))//xiyin start button pressed 
 		{
-			if(XYSTARTPRESS)USART_RX_STA = 0;
+			USART_RX_STA = 0;
 			xyiconstatue++;
-			xiyinflag=RESET;
 			ClearUsart_Buf();
 			xiyinonceflag=RESET;
 			DwinBitIconDisplay(XYICONADDR,xyiconstatue&0x01);//display xiyin icon         
 		} 
-		if((BJSTARTPRESS)||bujinflag)//bujin start button pressed 
+		if((BJSTARTPRESS))//bujin start button pressed 
 		{
             
-			if(BJSTARTPRESS)USART_RX_STA = 0;
+			USART_RX_STA = 0;
 			bjiconstatue++;
 			bujinflag=RESET;
 			ClearUsart_Buf();
@@ -266,7 +265,7 @@ void ReadDwinKeyValueReturn()//read dwin display keyvalue return
 			para2flash[20]= flowsetvalue;
 			IWDG_Feed();//feed watch dog befor read data from flash
 			STMFLASH_Write(FLASH_SAVE_ADDR,(u16*)para2flash,parameternum);//read parameters from flash  
-            if(bjiconstatue&0x01==0)
+            if((bjiconstatue&0x01)==0)
                 speedoffset=0;   
 		}
 		

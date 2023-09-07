@@ -4,7 +4,7 @@
 ..\obj\timer.o: ..\USER\stm32f1xx.h
 ..\obj\timer.o: ..\USER\stm32f103xe.h
 ..\obj\timer.o: ..\CORE\core_cm3.h
-..\obj\timer.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
+..\obj\timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\timer.o: ..\CORE\cmsis_compiler.h
 ..\obj\timer.o: ..\CORE\cmsis_armcc.h
 ..\obj\timer.o: ..\USER\system_stm32f1xx.h
@@ -13,7 +13,7 @@
 ..\obj\timer.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h
 ..\obj\timer.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h
 ..\obj\timer.o: ..\USER\stm32f1xx.h
-..\obj\timer.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
+..\obj\timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\timer.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h
 ..\obj\timer.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h
 ..\obj\timer.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h
@@ -60,7 +60,7 @@
 ..\obj\timer.o: ..\HARDWARE\BUZZER\buzzer.h
 ..\obj\timer.o: ..\HARDWARE\LED\led.h
 ..\obj\timer.o: ..\SYSTEM\usart\usart.h
-..\obj\timer.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdio.h
+..\obj\timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\timer.o: ..\HARDWARE\CMOS\cmos.h
 ..\obj\timer.o: ..\HARDWARE\DWINDISPLAY\dwindisplay.h
 ..\obj\timer.o: ..\SYSTEM\delay\delay.h

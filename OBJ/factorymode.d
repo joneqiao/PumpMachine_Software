@@ -4,7 +4,7 @@
 ..\obj\factorymode.o: ..\USER\stm32f1xx.h
 ..\obj\factorymode.o: ..\USER\stm32f103xe.h
 ..\obj\factorymode.o: ..\CORE\core_cm3.h
-..\obj\factorymode.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdint.h
+..\obj\factorymode.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\factorymode.o: ..\CORE\cmsis_compiler.h
 ..\obj\factorymode.o: ..\CORE\cmsis_armcc.h
 ..\obj\factorymode.o: ..\USER\system_stm32f1xx.h
@@ -13,7 +13,7 @@
 ..\obj\factorymode.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h
 ..\obj\factorymode.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h
 ..\obj\factorymode.o: ..\USER\stm32f1xx.h
-..\obj\factorymode.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stddef.h
+..\obj\factorymode.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\factorymode.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h
 ..\obj\factorymode.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h
 ..\obj\factorymode.o: ..\HALLIB\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h
@@ -77,7 +77,7 @@
 ..\obj\factorymode.o: ..\FreeRTOS\include\task.h
 ..\obj\factorymode.o: ..\FreeRTOS\include\list.h
 ..\obj\factorymode.o: ..\SYSTEM\usart\usart.h
-..\obj\factorymode.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdio.h
+..\obj\factorymode.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\factorymode.o: ..\HARDWARE\PARAMETES\parameters.h
 ..\obj\factorymode.o: ..\HARDWARE\EXTI\exti.h
 ..\obj\factorymode.o: ..\HARDWARE\IIC\myiic.h
@@ -87,4 +87,4 @@
 ..\obj\factorymode.o: ..\HARDWARE\CONTROL\control.h
 ..\obj\factorymode.o: ..\HARDWARE\BUZZER\buzzer.h
 ..\obj\factorymode.o: ..\HARDWARE\PID\PID.h
-..\obj\factorymode.o: C:\MDK\path\ARM\Compiler5.06\Bin\..\include\stdlib.h
+..\obj\factorymode.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
