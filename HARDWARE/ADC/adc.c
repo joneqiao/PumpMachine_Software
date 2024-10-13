@@ -12,8 +12,7 @@ extern u16 waterhight;
 extern float negativepressureK;
 extern float negativepressureB;
 
-ADC_HandleTypeDef ADC1_Handler;		                            //ADC���
-
+ADC_HandleTypeDef ADC1_Handler;
 
 /**
  * @brief 初始化ADC模块
@@ -79,23 +78,65 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     HAL_GPIO_Init(GPIOC, &GPIO_Initure);
 }
 
-//���ADCֵ
-//ch: ͨ��ֵ 0~16��ȡֵ��ΧΪ��ADC_CHANNEL_0~ADC_CHANNEL_16
-//����ֵ:ת�����
+/**
+ * @brief 获取指定通道的ADC值
+ *
+ * 获取指定ADC通道的ADC值，并返回该值。
+ ADC初始化部分添加通道配置 
+ */
+  void ADC_Init(void)
+{
+
+    // 配置ADC通道
+    ADC_ChannelConfTypeDef ADC1_ChanConf = {0};
+    ADC1_ChanConf.Channel = ADC_CHANNEL_0; // 示例通道，实际应根据需要设置
+    ADC1_ChanConf.Rank = ADC_REGULAR_RANK_1;
+    ADC1_ChanConf.SamplingTime = ADC_SAMPLETIME_239CYCLES_5;
+    HAL_ADC_ConfigChannel(&ADC1_Handler, &ADC1_ChanConf);
+}
+
+u16 Get_Adc(u32 ch) {
+    // 假设ADC通道已经在ADC_Init中配置好，这里不再重新配置
+    // 只需选择对应的通道，启动ADC，并等待转换完成
+
+    // 设置当前ADC通道（如果需要动态改变通道）
+    // 注意：根据硬件和库的实现，这一步可能是必要的，也可能不必要
+    // ADC1_Handler.Instance->CHSELR = (1UL << ch); // 示例代码，具体实现可能不同
+
+    // 启动ADC
+    HAL_ADC_Start(&ADC1_Handler);
+
+    // 等待转换完成
+    if (HAL_ADC_PollForConversion(&ADC1_Handler, 10) != HAL_OK) {
+        // 处理错误，例如返回特定错误码或重试
+        return 0; // 示例错误处理
+    }
+
+    // 返回ADC转换结果
+    return (u16)HAL_ADC_GetValue(&ADC1_Handler);
+}
+ * @param ch ADC通道号
+ *
+ * @return 转换后的ADC值，返回类型为u16
+ */
 u16 Get_Adc(u32 ch)   
 {
     ADC_ChannelConfTypeDef ADC1_ChanConf;
     
-    ADC1_ChanConf.Channel=ch;                                   //ͨ��
-    ADC1_ChanConf.Rank=1;                                       //��1�����У�����1
-    ADC1_ChanConf.SamplingTime=ADC_SAMPLETIME_239CYCLES_5;      //����ʱ��               
-    HAL_ADC_ConfigChannel(&ADC1_Handler,&ADC1_ChanConf);        //ͨ������
-	
-    HAL_ADC_Start(&ADC1_Handler);                               //����ADC
-	
-    HAL_ADC_PollForConversion(&ADC1_Handler,10);                //��ѯת��
- 
-	return (u16)HAL_ADC_GetValue(&ADC1_Handler);	        	//�������һ��ADC1�������ת�����
+    // 设置ADC通道配置
+    ADC1_ChanConf.Channel = ch;                                   //通道
+    ADC1_ChanConf.Rank = 1;                                       //设置为第1个转换序列，优先级为1
+    ADC1_ChanConf.SamplingTime = ADC_SAMPLETIME_239CYCLES_5;      //采样时间               
+    HAL_ADC_ConfigChannel(&ADC1_Handler, &ADC1_ChanConf);        //配置通道
+
+    // 启动ADC
+    HAL_ADC_Start(&ADC1_Handler);                               //启动ADC
+
+    // 轮询等待转换完成
+    HAL_ADC_PollForConversion(&ADC1_Handler, 10);                //轮询查询转换
+
+    // 返回ADC转换结果
+    return (u16)HAL_ADC_GetValue(&ADC1_Handler);	        	//获取ADC1的转换结果
 }
 //��ȡָ��ͨ����ת��ֵ��ȡtimes��,Ȼ��ƽ�� 
 //times:��ȡ����
