@@ -54,19 +54,29 @@ void ADC_Init(void)
 	HAL_ADCEx_Calibration_Start(&ADC1_Handler);					 //启动ADC校准
 }
 
-//ADC�ײ��������������ã�ʱ��ʹ��
-//�˺����ᱻHAL_ADC_Init()����
-//hadc:ADC���
+/**
+ * @brief 初始化ADC硬件抽象层（HAL）的Msp部分
+ *
+ * 初始化ADC硬件抽象层（HAL）的Msp部分，包括使能ADC1时钟、GPIOC时钟，并初始化ADC1相关的GPIOC引脚为模拟输入模式。
+ *
+ * @param hadc ADC句柄指针
+ */
 void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
 {
     GPIO_InitTypeDef GPIO_Initure;
-    __HAL_RCC_ADC1_CLK_ENABLE();                                //ʹ��ADC1ʱ��
-    __HAL_RCC_GPIOC_CLK_ENABLE();			                    //����GPIOCʱ��
+    // 使能ADC1时钟
+    __HAL_RCC_ADC1_CLK_ENABLE();                                //启用ADC1时钟
+    // 使能GPIOC时钟
+    __HAL_RCC_GPIOC_CLK_ENABLE();			                    //使能GPIOC时钟
 	
-    GPIO_Initure.Pin=GPIO_PIN_0|GPIO_PIN_1;                     //PC0->��ѹ������    PC1->����������
-    GPIO_Initure.Mode=GPIO_MODE_ANALOG;                         //ģ��
-    GPIO_Initure.Pull=GPIO_NOPULL;                              //����������
-    HAL_GPIO_Init(GPIOC,&GPIO_Initure);
+    // 配置PC0和PC1引脚
+    GPIO_Initure.Pin = GPIO_PIN_0 | GPIO_PIN_1;                 //PC0->模拟输入引脚    PC1->模拟输入引脚
+    // 设置引脚模式为模拟输入
+    GPIO_Initure.Mode = GPIO_MODE_ANALOG;                         //模式
+    // 设置引脚无上拉/下拉电阻
+    GPIO_Initure.Pull = GPIO_NOPULL;                              //无上拉/下拉
+    // 初始化GPIOC端口
+    HAL_GPIO_Init(GPIOC, &GPIO_Initure);
 }
 
 //���ADCֵ
