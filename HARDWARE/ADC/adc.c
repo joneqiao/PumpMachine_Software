@@ -1,12 +1,7 @@
 #include "adc.h"
 #include "delay.h"
 #include "math.h"
-/************************************************
- IRcontroller-HAL¿âº¯Êý°æ
- ¼¼ÊõÖ§³Ö£ºwww.logic-elec.com
- ÄÏ¾©Âå¼ª¿Ëµç×Ó¿Æ¼¼ÓÐÏÞ¹«Ë¾  
- ×÷Õß£ºjone @LOGIC-ELEC
-************************************************/ 
+
 extern float MXP2100offset;
 extern float MXP2100sensitivity;
 extern float FSS1500offset;
@@ -17,67 +12,84 @@ extern u16 waterhight;
 extern float negativepressureK;
 extern float negativepressureB;
 
-ADC_HandleTypeDef ADC1_Handler;		                            //ADC¾ä±ú
-//³õÊ¼»¯ADC
-//ch: ADC_channels 
-//Í¨µÀÖµ 0~16È¡Öµ·¶Î§Îª£ºADC_CHANNEL_0~ADC_CHANNEL_16
+ADC_HandleTypeDef ADC1_Handler;		                            //ADCï¿½ï¿½ï¿½
+
+
+/**
+ * @brief åˆå§‹åŒ–ADCæ¨¡å—
+ *
+ * è¯¥å‡½æ•°ç”¨äºŽåˆå§‹åŒ–ADCæ¨¡å—ï¼ŒåŒ…æ‹¬æ—¶é’Ÿé…ç½®ã€ADCå‚æ•°è®¾ç½®ç­‰ã€‚
+ *
+ * @param æ— 
+ * @return æ— 
+ */
 void ADC_Init(void)
 { 
 	RCC_PeriphCLKInitTypeDef ADC_CLKInit;
 	
-	ADC_CLKInit.PeriphClockSelection=RCC_PERIPHCLK_ADC;			//ADCÍâÉèÊ±ÖÓ
-	ADC_CLKInit.AdcClockSelection=RCC_ADCPCLK2_DIV6;			//·ÖÆµÒò×Ó6Ê±ÖÓÎª72M/6=12MHz
-	HAL_RCCEx_PeriphCLKConfig(&ADC_CLKInit);					//ÉèÖÃADCÊ±ÖÓ
+	// è®¾ç½®ADCæ—¶é’Ÿæº
+	ADC_CLKInit.PeriphClockSelection=RCC_PERIPHCLK_ADC;			//ADCæ—¶é’Ÿæºé€‰æ‹©
+	ADC_CLKInit.AdcClockSelection=RCC_ADCPCLK2_DIV6;			//å°†PCLK2æ—¶é’Ÿåˆ†é¢‘6å€åŽä¸ºADCæ—¶é’Ÿï¼Œå³72M/6=12MHz
+	HAL_RCCEx_PeriphCLKConfig(&ADC_CLKInit);					//é…ç½®ADCæ—¶é’Ÿ
 	
+    // é…ç½®ADC1
     ADC1_Handler.Instance=ADC1;
-    ADC1_Handler.Init.DataAlign=ADC_DATAALIGN_RIGHT;             //ÓÒ¶ÔÆë
-    ADC1_Handler.Init.ScanConvMode=DISABLE;                      //·ÇÉ¨ÃèÄ£Ê½
-    ADC1_Handler.Init.ContinuousConvMode=DISABLE;                //¹Ø±ÕÁ¬Ðø×ª»»
-    ADC1_Handler.Init.NbrOfConversion=1;                         //1¸ö×ª»»ÔÚ¹æÔòÐòÁÐÖÐ Ò²¾ÍÊÇÖ»×ª»»¹æÔòÐòÁÐ1 
-    ADC1_Handler.Init.DiscontinuousConvMode=DISABLE;             //½ûÖ¹²»Á¬Ðø²ÉÑùÄ£Ê½
-    ADC1_Handler.Init.NbrOfDiscConversion=0;                     //²»Á¬Ðø²ÉÑùÍ¨µÀÊýÎª0
-    ADC1_Handler.Init.ExternalTrigConv=ADC_SOFTWARE_START;       //Èí¼þ´¥·¢
-    HAL_ADC_Init(&ADC1_Handler);                                 //³õÊ¼»¯ 
+    // é…ç½®ADCæ•°æ®å¯¹é½æ–¹å¼
+    ADC1_Handler.Init.DataAlign=ADC_DATAALIGN_RIGHT;             //å³å¯¹é½
+    // é…ç½®æ‰«ææ¨¡å¼
+    ADC1_Handler.Init.ScanConvMode=DISABLE;                      //ç¦ç”¨æ‰«ææ¨¡å¼
+    // é…ç½®è¿žç»­è½¬æ¢æ¨¡å¼
+    ADC1_Handler.Init.ContinuousConvMode=DISABLE;                //ç¦ç”¨è¿žç»­è½¬æ¢æ¨¡å¼
+    // é…ç½®è½¬æ¢åºåˆ—é•¿åº¦
+    ADC1_Handler.Init.NbrOfConversion=1;                         //è½¬æ¢åºåˆ—é•¿åº¦ä¸º1ï¼Œå³æ¯æ¬¡åªè½¬æ¢ä¸€ä¸ªé€šé“
+    // é…ç½®ä¸è¿žç»­è½¬æ¢æ¨¡å¼
+    ADC1_Handler.Init.DiscontinuousConvMode=DISABLE;             //ç¦ç”¨ä¸è¿žç»­è½¬æ¢æ¨¡å¼
+    // é…ç½®ä¸è¿žç»­è½¬æ¢åºåˆ—é•¿åº¦
+    ADC1_Handler.Init.NbrOfDiscConversion=0;                     //ä¸è¿žç»­è½¬æ¢åºåˆ—é•¿åº¦ä¸º0
+    // é…ç½®å¤–éƒ¨è§¦å‘
+    ADC1_Handler.Init.ExternalTrigConv=ADC_SOFTWARE_START;       //è½¯ä»¶è§¦å‘
+    HAL_ADC_Init(&ADC1_Handler);                                 //åˆå§‹åŒ–ADC
 	
-	HAL_ADCEx_Calibration_Start(&ADC1_Handler);					 //Ð£×¼ADC
+	// ADCæ ¡å‡†
+	HAL_ADCEx_Calibration_Start(&ADC1_Handler);					 //å¯åŠ¨ADCæ ¡å‡†
 }
 
-//ADCµ×²ãÇý¶¯£¬Òý½ÅÅäÖÃ£¬Ê±ÖÓÊ¹ÄÜ
-//´Ëº¯Êý»á±»HAL_ADC_Init()µ÷ÓÃ
-//hadc:ADC¾ä±ú
+//ADCï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½Ê±ï¿½ï¿½Ê¹ï¿½ï¿½
+//ï¿½Ëºï¿½ï¿½ï¿½ï¿½á±»HAL_ADC_Init()ï¿½ï¿½ï¿½ï¿½
+//hadc:ADCï¿½ï¿½ï¿½
 void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
 {
     GPIO_InitTypeDef GPIO_Initure;
-    __HAL_RCC_ADC1_CLK_ENABLE();                                //Ê¹ÄÜADC1Ê±ÖÓ
-    __HAL_RCC_GPIOC_CLK_ENABLE();			                    //¿ªÆôGPIOCÊ±ÖÓ
+    __HAL_RCC_ADC1_CLK_ENABLE();                                //Ê¹ï¿½ï¿½ADC1Ê±ï¿½ï¿½
+    __HAL_RCC_GPIOC_CLK_ENABLE();			                    //ï¿½ï¿½ï¿½ï¿½GPIOCÊ±ï¿½ï¿½
 	
-    GPIO_Initure.Pin=GPIO_PIN_0|GPIO_PIN_1;                     //PC0->¸ºÑ¹´«¸ÐÆ÷    PC1->´¥Á¦´«¸ÐÆ÷
-    GPIO_Initure.Mode=GPIO_MODE_ANALOG;                         //Ä£Äâ
-    GPIO_Initure.Pull=GPIO_NOPULL;                              //²»´øÉÏÏÂÀ­
+    GPIO_Initure.Pin=GPIO_PIN_0|GPIO_PIN_1;                     //PC0->ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½    PC1->ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    GPIO_Initure.Mode=GPIO_MODE_ANALOG;                         //Ä£ï¿½ï¿½
+    GPIO_Initure.Pull=GPIO_NOPULL;                              //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     HAL_GPIO_Init(GPIOC,&GPIO_Initure);
 }
 
-//»ñµÃADCÖµ
-//ch: Í¨µÀÖµ 0~16£¬È¡Öµ·¶Î§Îª£ºADC_CHANNEL_0~ADC_CHANNEL_16
-//·µ»ØÖµ:×ª»»½á¹û
+//ï¿½ï¿½ï¿½ADCÖµ
+//ch: Í¨ï¿½ï¿½Öµ 0~16ï¿½ï¿½È¡Öµï¿½ï¿½Î§Îªï¿½ï¿½ADC_CHANNEL_0~ADC_CHANNEL_16
+//ï¿½ï¿½ï¿½ï¿½Öµ:×ªï¿½ï¿½ï¿½ï¿½ï¿½
 u16 Get_Adc(u32 ch)   
 {
     ADC_ChannelConfTypeDef ADC1_ChanConf;
     
-    ADC1_ChanConf.Channel=ch;                                   //Í¨µÀ
-    ADC1_ChanConf.Rank=1;                                       //µÚ1¸öÐòÁÐ£¬ÐòÁÐ1
-    ADC1_ChanConf.SamplingTime=ADC_SAMPLETIME_239CYCLES_5;      //²ÉÑùÊ±¼ä               
-    HAL_ADC_ConfigChannel(&ADC1_Handler,&ADC1_ChanConf);        //Í¨µÀÅäÖÃ
+    ADC1_ChanConf.Channel=ch;                                   //Í¨ï¿½ï¿½
+    ADC1_ChanConf.Rank=1;                                       //ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½1
+    ADC1_ChanConf.SamplingTime=ADC_SAMPLETIME_239CYCLES_5;      //ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½               
+    HAL_ADC_ConfigChannel(&ADC1_Handler,&ADC1_ChanConf);        //Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	
-    HAL_ADC_Start(&ADC1_Handler);                               //¿ªÆôADC
+    HAL_ADC_Start(&ADC1_Handler);                               //ï¿½ï¿½ï¿½ï¿½ADC
 	
-    HAL_ADC_PollForConversion(&ADC1_Handler,10);                //ÂÖÑ¯×ª»»
+    HAL_ADC_PollForConversion(&ADC1_Handler,10);                //ï¿½ï¿½Ñ¯×ªï¿½ï¿½
  
-	return (u16)HAL_ADC_GetValue(&ADC1_Handler);	        	//·µ»Ø×î½üÒ»´ÎADC1¹æÔò×éµÄ×ª»»½á¹û
+	return (u16)HAL_ADC_GetValue(&ADC1_Handler);	        	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ADC1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½
 }
-//»ñÈ¡Ö¸¶¨Í¨µÀµÄ×ª»»Öµ£¬È¡times´Î,È»ºóÆ½¾ù 
-//times:»ñÈ¡´ÎÊý
-//·µ»ØÖµ:Í¨µÀchµÄtimes´Î×ª»»½á¹ûÆ½¾ùÖµ
+//ï¿½ï¿½È¡Ö¸ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½Öµï¿½ï¿½È¡timesï¿½ï¿½,È»ï¿½ï¿½Æ½ï¿½ï¿½ 
+//times:ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+//ï¿½ï¿½ï¿½ï¿½Öµ:Í¨ï¿½ï¿½chï¿½ï¿½timesï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½Öµ
 u16 Get_Adc_Average(u32 ch,u8 times)
 {
 	u32 temp_val=0;
@@ -89,13 +101,13 @@ u16 Get_Adc_Average(u32 ch,u8 times)
 	}
 	return temp_val/times;
 } 
-//·µ»ØÖµ:Í¨µÀchµÄµç×èÖµ
+//ï¿½ï¿½ï¿½ï¿½Öµ:Í¨ï¿½ï¿½chï¿½Äµï¿½ï¿½ï¿½Öµ
 u16 Get_R_Value(u32 ch)
 {   
     u16 adcx;
 	float temp;
-    adcx=Get_Adc_Average(ch,20);                            //»ñÈ¡Í¨µÀxµÄ×ª»»Öµ£¬20´ÎÈ¡Æ½¾ù
-    temp=(float)adcx*(3.3/4096);                            //»ñÈ¡¼ÆËãºóµÄ´øÐ¡ÊýµÄÊµ¼ÊµçÑ¹Öµ£¬±ÈÈç3.1111  12Î»µÄad  2µÄ12´Î·½
+    adcx=Get_Adc_Average(ch,20);                            //ï¿½ï¿½È¡Í¨ï¿½ï¿½xï¿½ï¿½×ªï¿½ï¿½Öµï¿½ï¿½20ï¿½ï¿½È¡Æ½ï¿½ï¿½
+    temp=(float)adcx*(3.3/4096);                            //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Êµï¿½Êµï¿½Ñ¹Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½3.1111  12Î»ï¿½ï¿½ad  2ï¿½ï¿½12ï¿½Î·ï¿½
     return temp;
 }
 
@@ -106,7 +118,7 @@ float NegativePrussure()
     float negaticetotal;   
     for( i=0; i<20; i++ )
     {    
-        negativevalue = Get_Adc( ADC_CHANNEL_10 );//pc0  ¸ºÑ¹´«¸ÐÆ÷  µçÎ»Æ÷µ÷µ½1000
+        negativevalue = Get_Adc( ADC_CHANNEL_10 );//pc0  ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1000
         negativevalue = ( negativevalue )*( 3.3/4096 ) * 1000;//mv
         negativevalue = negativevalue - MXP2100offset;
         negativevalue = negativevalue / MXP2100sensitivity;
@@ -125,12 +137,12 @@ float ChuliSensorPrussure()
     float chlivaluetotal=0;
     for(i=0;i<20;i++)
     {
-        chulivalue=Get_Adc(ADC_CHANNEL_11);//pc1  ´¥Á¦´«¸ÐÆ÷     µçÎ»Æ÷µ÷µ½1000
-        chulivalue=chulivalue-FSS1500offset;//¼õÈ¥µãÎ»Æ÷µÄÖµ   
+        chulivalue=Get_Adc(ADC_CHANNEL_11);//pc1  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½     ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1000
+        chulivalue=chulivalue-FSS1500offset;//ï¿½ï¿½È¥ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½Öµ   
         chulivalue=chulik*chulivalue+chulib;
         
         if( waterhight <= 100 )chulivalue = chulivalue - 0.75*waterhight;
-        else if( 200 < waterhight && waterhight <= 300 )chulivalue = chulivalue + 0.75*(waterhight-200);//¼üÅÌÃ»ÓÐ¸ºÊý£¬ÒÔ°ÙÎ»µÄ2Îª¸ºÊý·ûºÅ£¬ËùÒÔÐèÒª¼õÈ¥200 
+        else if( 200 < waterhight && waterhight <= 300 )chulivalue = chulivalue + 0.75*(waterhight-200);//ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô°ï¿½Î»ï¿½ï¿½2Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½È¥200 
                 
         if(chulivalue<30)chulivalue=0;
         chlivaluetotal+=chulivalue;
